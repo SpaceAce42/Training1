@@ -18,14 +18,16 @@ public class Robot extends IterativeRobot {
 	String autoSelected;
 	SendableChooser<String> chooser = new SendableChooser<>();
 
+	public static RobotMappings robotMappings;
+
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
 	@Override
 	public void robotInit() {
-		chooser.addDefault("Default Auto", centerAuto);
-		chooser.addObject("My Auto", sideAuto);
+		chooser.addDefault("Center Auto", centerAuto);
+		chooser.addObject("Side Auto", sideAuto);
 		SmartDashboard.putData("Auto choices", chooser);
 	}
 
